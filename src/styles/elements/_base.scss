@@ -1,0 +1,27 @@
+:root {
+  --main-color: hsl(0, 0%, 100%);
+  --second-color: hsl(0, 0%, 0%);
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+}
+
+body:has([popover]:popover-open) {
+  overflow: hidden;
+}
+
+img {
+  max-inline-size: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  pointer-events: none;
+  display: inline-flex;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
