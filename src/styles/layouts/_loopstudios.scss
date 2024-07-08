@@ -1,0 +1,15 @@
+@use "../tools" as t;
+
+.l-loopstudios {
+    max-inline-size: 1440px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: [page-start] minmax(24px, 1fr)
+        [content-start] minmax(0, 1110px)
+        [content-end] minmax(24px, 1fr)
+        [page-end];
+
+    &__header {
+        grid-column: page-start / page-end;
+    }
+}

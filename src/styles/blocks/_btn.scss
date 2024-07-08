@@ -1,0 +1,23 @@
+@use "../tools" as t;
+
+.b-btn {
+    background-color: transparent;
+
+    & svg {
+        block-size: inherit;
+        inline-size: inherit;
+        fill: currentColor;
+    }
+
+    &--mobile-menu {
+        block-size: 16px;
+        inline-size: 24px;
+        color: white;
+    }
+
+    &--close {
+        block-size: 20px;
+        inline-size: 20px;
+        color: white;
+    }
+}

@@ -1,1 +1,17 @@
 @use '../tools' as t;
+
+h1,
+h2,
+h3 {
+    font-family: var(--main-font), sans-serif;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: clamp(t.rem(40),
+            1.795774647887324rem + 3.004694835680751vw,
+            t.rem(72));
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: #fff;
+}

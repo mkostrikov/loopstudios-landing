@@ -1,10 +1,13 @@
 :root {
   --main-color: hsl(0, 0%, 100%);
   --second-color: hsl(0, 0%, 0%);
+
+  --main-font: 'Josefin Sans';
+  --second-font: 'Alata';
 }
 
 body {
-  font-family: 'Alata', sans-serif;
+  font-family: var(--second-font), sans-serif;
 }
 
 body:has([popover]:popover-open) {
@@ -17,11 +20,35 @@ img {
 }
 
 a {
-  pointer-events: none;
   display: inline-flex;
+  position: relative;
 }
 
-button:hover,
-a:hover {
-  cursor: pointer;
+a::before {
+  content: '';
+  position: absolute;
+  inset: -24px;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  padding-block-start: 2px;
+  inline-size: 100%;
+  background: linear-gradient(to bottom, #fff, #fff) no-repeat;
+  background-position: center bottom;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+
+@media (hover:hover) {
+  a:hover::after {
+    background-size: 100% 2px;
+  }
+  
+  a:hover,
+  button:hover {
+    cursor: pointer;
+  }
 }

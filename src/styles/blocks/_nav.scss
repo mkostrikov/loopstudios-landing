@@ -1,0 +1,32 @@
+@use "../tools" as t;
+
+.b-nav {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include t.breakpoint(m) {
+            flex-direction: row;
+        }
+    }
+
+    &__list--mobile-menu {
+        gap: 24px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.67;
+        color: #fff;
+    }
+
+    &__link--mobile-menu {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 1.04;
+        text-transform: uppercase;
+    }
+}

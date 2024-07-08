@@ -1,0 +1,37 @@
+@use "../tools" as t;
+
+.b-mobile-menu {
+
+    &__content {
+        background-color: #000;
+        block-size: 100dvh;
+        inline-size: 100vw;
+        padding: 40px 24px 0;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: auto auto 1fr;
+        place-items: center start;
+        gap: 159px 0;
+    }
+
+    &::backdrop {
+        background-color: #000;
+    }
+
+    &:popover-open {
+        opacity: 1;
+        transition: opacity .5s, display .5s, overlay .5s;
+    }
+
+    @starting-style {
+        &:popover-open {
+            opacity: 0;
+        }
+    }
+
+    &:not(:popover-open) {
+        opacity: 0;
+        transition: opacity .3s, display .3s, overlay .3s;
+    }
+
+}
