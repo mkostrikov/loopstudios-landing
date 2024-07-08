@@ -24,6 +24,17 @@
         display: grid;
         grid-template-areas: "card";
         position: relative;
+        cursor: pointer;
+    }
+
+    @media (hover:hover) {
+        &__item:hover::after {
+            background: rgba(255, 255, 255, 0.75);
+        }
+
+        &__item:hover &__title {
+            color: #000;
+        }
     }
 
     &__item::after {
