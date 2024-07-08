@@ -3,6 +3,7 @@
 .l-banner {
     display: grid;
     gap: 48px;
+    box-shadow: 2px 0 1px 1px #fff;
 
     &__img {
         inline-size: 100%;

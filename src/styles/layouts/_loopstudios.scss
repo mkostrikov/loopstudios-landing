@@ -1,6 +1,8 @@
 @use "../tools" as t;
 
 .l-loopstudios {
+    --gap: 96px;
+
     max-inline-size: 1440px;
     margin-inline: auto;
     display: grid;
@@ -8,6 +10,7 @@
         [content-start] minmax(0, 1110px)
         [content-end] minmax(24px, 1fr)
         [page-end];
+    row-gap: var(--gap);
 
     &__header {
         grid-column: page-start / page-end;
@@ -15,5 +18,11 @@
 
     &__main {
         grid-column: content-start / content-end;
+        display: grid;
+        row-gap: var(--gap);
+    }
+
+    @include t.breakpoint(m) {
+        --gap: 184px;
     }
 }

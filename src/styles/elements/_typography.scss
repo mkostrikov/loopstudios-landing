@@ -23,6 +23,13 @@ h2 {
     color: #000;
 }
 
+h3 {
+    font-size: clamp(t.rem(24),
+            1.323943661971831rem + 0.7511737089201878vw,
+            t.rem(32));
+    color: #fff;
+}
+
 p {
     font-weight: 400;
     font-size: 15px;
