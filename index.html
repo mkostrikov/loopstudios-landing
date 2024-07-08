@@ -20,7 +20,7 @@
                 <source media="(min-width: 480px)" srcset="/src/assets/images/desktop/image-hero.webp" width="650"
                     height="1440">
                 <img class="l-header__img" src="/src/assets/images/mobile/image-hero.webp" alt="" sizes="100vw"
-                    width="750" height="1300">
+                    width="750" height="1300" fetchpriority="high">
             </picture>
 
             <div class="l-header__content">
@@ -81,6 +81,26 @@
                 </div>
             </div>
         </header>
+
+        <main class="l-loopstudios__main">
+            <section class="l-banner">
+                <img 
+                    class="l-banner__img"
+                    src="/src/assets/images/desktop/image-interactive.webp"
+                    alt="" 
+                    width="731" 
+                    height="500">
+
+                <div class="l-banner__content">
+                    <h2 class="l-banner__headline">
+                        The leader in interactive VR
+                    </h2>
+                    <p class="l-banner__description">
+                        Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.
+                    </p>
+                </div>
+            </section>
+        </main>
     </div>
 
     <div class="b-mobile-menu" id="menu" popover>
@@ -93,7 +113,7 @@
                         fill-rule="nonzero" />
                 </svg>
             </a>
-    
+
             <button class="b-btn b-btn--close" popovertarget="menu" popovertargetaction="hide">
                 <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Close</title>
@@ -102,7 +122,7 @@
                         fill-rule="evenodd" />
                 </svg>
             </button>
-    
+
             <nav class="b-nav">
                 <ul class="b-nav__list b-nav__list--mobile-menu">
                     <li class="b-nav__item">

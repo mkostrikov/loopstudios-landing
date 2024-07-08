@@ -1,0 +1,41 @@
+@use "../tools" as t;
+
+.l-banner {
+    display: grid;
+    gap: 48px;
+
+    &__img {
+        inline-size: 100%;
+        block-size: auto;
+        max-block-size: 500px;
+        object-fit: cover;
+        object-position: center;
+
+        @include t.breakpoint(m) {
+            grid-column: 1 / 3;
+            grid-row: 1 / -1;
+        }
+    }
+
+    &__content {
+        display: grid;
+        gap: 16px;
+        text-align: center;
+        background-color: #fff;
+
+        @include t.breakpoint(m) {
+            text-align: left;
+            grid-column: 2 / -1;
+            grid-row: 2 / -1;
+            place-items: start;
+            place-content: end;
+            padding-inline-start: 10%;
+        }
+    }
+
+    @include t.breakpoint(m) {
+        grid-template-columns: 60% 20% 20%;
+        grid-template-rows: 36% 64%;
+        gap: 0;
+    }
+}

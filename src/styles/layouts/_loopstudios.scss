@@ -12,4 +12,8 @@
     &__header {
         grid-column: page-start / page-end;
     }
+
+    &__main {
+        grid-column: content-start / content-end;
+    }
 }
