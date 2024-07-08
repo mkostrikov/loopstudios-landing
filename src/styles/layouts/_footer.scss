@@ -1,0 +1,60 @@
+@use "../tools" as t;
+
+.l-footer {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    &__content {
+        padding-block: 56px;
+        grid-column: content-start / content-end;
+        display: grid;
+        grid-template-rows: auto 32px auto 48px auto 16px auto;
+        grid-template-areas:
+            "link"
+            "..."
+            "nav"
+            "..."
+            "icons"
+            "..."
+            "copyright";
+        place-items: center;
+
+        @include t.breakpoint(m) {
+            grid-template-areas:
+                "link icons"
+                "nav copyright";
+            grid-template-rows: auto;
+            justify-content: space-between;
+            row-gap: 14px;
+            place-items: start;
+        }
+    }
+
+    &__link {
+        grid-area: link;
+    }
+
+    &__nav {
+        grid-area: nav;
+    }
+
+    &__icons {
+        grid-area: icons;
+        display: flex;
+        gap: 16px;
+
+        @include t.breakpoint(m) {
+            justify-self: end;
+        }
+    }
+
+    &__copyright {
+        grid-area: copyright;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.67;
+        color: #fff;
+        opacity: 0.5;
+    }
+}

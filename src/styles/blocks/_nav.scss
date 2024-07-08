@@ -5,7 +5,8 @@
     &__list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 16px;
+        place-items: center;
 
         @include t.breakpoint(m) {
             flex-direction: row;
@@ -13,6 +14,7 @@
     }
 
     &__list--mobile-menu {
+        align-items: start;
         gap: 24px;
     }
 

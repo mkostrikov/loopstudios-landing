@@ -12,7 +12,8 @@
         [page-end];
     row-gap: var(--gap);
 
-    &__header {
+    &__header,
+    &__footer {
         grid-column: page-start / page-end;
     }
 

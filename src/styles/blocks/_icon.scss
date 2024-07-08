@@ -1,0 +1,20 @@
+@use "../tools" as t;
+
+.b-icon {
+    fill: white;
+
+    &--logo {
+        block-size: 24px;
+        inline-size: 144px;
+
+        @include t.breakpoint(m) {
+            block-size: 32px;
+            inline-size: 192px;
+        }
+    }
+
+    &--social {
+        block-size: 24px;
+        inline-size: 24px;
+    }
+}
